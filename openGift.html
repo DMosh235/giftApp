@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Mountains of Christmas' rel='stylesheet'>
+    <title>Your Gift Page</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body id="openGiftBody">
+    <!-- Your gift content goes here -->
+    <header>
+        <br>
+        <h1 class="headMessage">What ever could it be?</h1>
+    </header>
+
+    <div id="bonusButton">
+        <a href="https://www.usinphotos.com/" class="button-54" id="bonusButtonText">One More...</a>
+    </div>
+
+    <div id="giftBox" class="birthday-gift">
+        <div class="gift">
+            <input id='click' type='checkbox'>
+            <label class='click' for='click'></label>
+            <div class="wishes"></div>
+            <div class="sparkles">
+                <div class="spark1"></div>
+                <div class="spark2"></div>
+                <div class="spark3"></div>
+                <div class="spark4"></div>
+                <div class="spark5"></div>
+                <div class="spark6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="homeButton">
+        <a href="gift.html" class="button-54">Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.style.opacity = 1; // Ensure the body is visible on load
+    
+            // Add an event listener to the checkbox
+            document.getElementById('click').addEventListener('change', function () {
+                // When the checkbox is checked (gift is opened), wait for 3 seconds and then fade in the bonus button
+                if (this.checked) {
+                    setTimeout(function () {
+                        document.getElementById('bonusButton').style.opacity = 1;
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                } else {
+                    document.getElementById('bonusButton').style.opacity = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
